@@ -1,0 +1,150 @@
+*{
+  font-family: Inter, Sans-Serif;
+}
+
+body{
+  margin: 0;
+  background-color: rgba(0,0,0,0.95)
+}
+
+/* -------- HEADER --------- */
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/render-02-wide_small.png") !important;
+  background-position: bottom;
+  background-size: cover;
+  color: white;
+  padding: 2em;
+  box-sizing: border-box;
+  text-align: center;
+  filter: hue-rotate(0deg);
+  animation-direction: reverse;
+  animation-name: hue-rotate2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -200;
+}
+
+header object{
+  max-width: 100%;
+  width: 30em;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  filter: hue-rotate(180deg);
+  animation-name: hue-rotate2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+/* -------- MAIN --------- */
+
+main{
+  padding-top: 250px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0em auto;
+  max-width: 60ch;
+  color: rgba(255,255,255,0.8);
+  text-align: left;
+  font-weight: 300;
+  margin-bottom 1em;
+}
+main p {
+  margin-bottom: 0;
+  line-height: 1.5;
+  display: inline-table;
+}
+
+main b{
+  font-weight: 900;
+}
+
+main li{
+  line-height: 1.5;
+}
+
+
+/* -------- NAV --------- */
+
+nav{
+  margin: 1em auto;
+  margin-top: 2.5rem;
+  width: 20em;
+  color: white;
+  text-align: center;
+}
+
+nav h2{
+  margin: 0;
+  margin-bottom: 0.1em;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0.5em 0em;
+  border-radius: 4px;
+  transition: 500ms;
+}
+
+nav a:hover{
+   background-color: rgba(10,80,80,1);
+  transition: 500ms;
+}
+
+
+
+
+/* -------- FOOTER --------- */
+
+footer{
+  width: 100%;
+  position: fixed;
+  height: 30%;
+  background-image: url("../images/render-01-wide_small.png") !important;
+  background-position: top;
+  background-size: cover;
+  color: white;
+  padding: 2em;
+  box-sizing: border-box;
+  z-index: -200;
+  bottom: 0px;
+  filter: hue-rotate(180deg);
+  animation-name: hue-rotate1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes hue-rotate1 {
+  0%   {filter: hue-rotate(180deg);}
+  50%  {filter: hue-rotate(360deg);}
+  100% {filter: hue-rotate(540deg);}
+}
+
+@keyframes hue-rotate2 {
+  0%   {filter: hue-rotate(0deg);}
+  100% {filter: hue-rotate(360deg);}
+}
