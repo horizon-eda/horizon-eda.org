@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset=utf-8>
+        <title>OAuth code display</title>
+        <link rel="icon" href="images/icon-16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="images/icon-32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="images/icon-64.png" sizes="64x64" type="image/png">
+        <link rel="icon" href="images/icon-256.png" sizes="256x256" type="image/png">
+        <link rel="icon" href="images/icon.svg" sizes="any" type="image/svg+xml">
+        <script>
+            function init() {
+                var params = new URLSearchParams(window.location.search);
+                document.getElementById("code").textContent=params.get("code");
+            }
+
+            function copy() {
+                navigator.clipboard.writeText(document.getElementById("code").textContent).then(function() {
+                    document.getElementById("copied").textContent = "Copied";
+                }, function() {
+                    document.getElementById("copied").textContent = "Clipboard write failed";
+                });
+            }
+        </script>
+    </head>
+
+    <body OnLoad="init()">
+        <h1>OAuth code display</h1>
+        Code is: <span style="font-family: monospace;" id="code">foo</span> <button OnClick="copy()">Copy</button><span id="copied"></span>
+    </body>
+</html>
