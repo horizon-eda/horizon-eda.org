@@ -195,6 +195,10 @@ nav a:hover{
   }
 }
 
+#ircnotice a {
+  color: #4CAF50;
+}
+
 
 /* -------- FOOTER --------- */
 
